@@ -5,3 +5,19 @@ You can install packages from here using:
 ```
 pip install <package_name> --extra-index-url https://aimat-lab.github.io/package-index/
 ```
+
+
+## Config File
+It is also possible to create a pip config file which allows to automatically search packages from the AIMat Lab without 
+adding the tag `extra-index-url` for every install.
+
+You just have to create a file called `pip.conf` in the directory `/home/user/.config/pip` and copy the following
+config:
+
+```
+[global]
+  extra-index-url = https://aimat-lab.github.io/package-index/ 
+[install]
+  trusted-host = https://aimat-lab.github.io/package-index/
+```
+
